@@ -1,0 +1,28 @@
+<ion-view title="Add Sale" id="page6">
+  <ion-content padding="true" class="has-header">
+    <form id="addSale-form2" class="list">
+      <label class="item item-select" id="addSale-select2">
+        <span class="input-label">Agent</span>
+        <select ng-model="data.agent" ng-options="agent.AgentID as agent.AgentName for agent in agents"></select>
+      </label>
+      <label class="item item-input" id="addSale-input2">
+        <span class="input-label">Sale Date</span>
+        <input type="date" placeholder="" ng-model="data.saleDate">
+      </label>
+      <label class="item item-select" id="addSale-select3">
+        <span class="input-label">Destination</span>
+        <select ng-model="data.destination" ng-options="destination.DestinationID as destination.DestinationName for destination in destinations"></select>
+      </label>
+      <label class="item item-input" id="addSale-input3">
+        <span class="input-label">Amount</span>
+        <input type="number" placeholder="" ng-model="data.amount">
+      </label>
+      <button id="addSale-button2" ng-click="addSale()" ng-hide="hideButton" class="button button-positive  button-block">Add Sale</button>
+    </form>
+    <div id="addSale-markdown18" style="text-align:center;" class="show-list-numbers-and-dots">
+      <p style="color:#000000;">
+        <strong>{{ post.message }}</strong>
+      </p>
+    </div>
+  </ion-content>
+</ion-view>

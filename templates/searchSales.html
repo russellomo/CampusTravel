@@ -1,0 +1,24 @@
+<ion-view title="Search Sales" id="page7">
+  <ion-content padding="true" class="has-header">
+    <form id="searchSales-form3" class="list">
+      <label class="item item-select" id="searchSales-select4">
+        <span class="input-label">Agent</span>
+        <select ng-model="data.agent" ng-options="agent.AgentID as agent.AgentName for agent in agents"></select>
+      </label>
+      <label class="item item-select" id="searchSales-select5">
+        <span class="input-label">Destination</span>
+        <select ng-model="data.destination" ng-options="destination.DestinationID as destination.DestinationName for destination in destinations"></select>
+      </label>
+      <label class="item item-input" id="searchSales-input4">
+        <span class="input-label">Amount Above $</span>
+        <input type="number" placeholder="0.00" ng-model="data.above">
+      </label>
+      <label class="item item-input" id="searchSales-input5">
+        <span class="input-label">Amount Below $</span>
+        <input type="number" placeholder="0.00" ng-model="data.below">
+      </label>
+    </form>
+    <a ui-sref="campusTravel.searchResults({&quot;agent&quot;:&quot;&quot;+ data.agent +&quot;&quot;,&quot;destination&quot;:&quot;&quot;+ data.destination +&quot;&quot;,&quot;above&quot;:&quot;&quot;+ data.above +&quot;&quot;,&quot;below&quot;:&quot;&quot;+ data.below +&quot;&quot;})"
+      id="searchSales-button3" ng-click="searchSales()" class="button button-positive  button-block">Search Sales</a>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,47 @@
+<ion-view title="Search Results" id="page8">
+  <ion-content padding="true" class="has-header">
+    <div id="searchResults-markdown19" class="show-list-numbers-and-dots">
+      <p style="color:#000000;">{{ data.criteria }}</p>
+    </div>
+    <div id="searchResults-container19" class="row">
+      <div id="searchResults-container20" class="col-25 col-bottom">
+        <div id="searchResults-markdown20" class="show-list-numbers-and-dots">
+          <p style="color:#000000;">
+            <strong>Date</strong>
+          </p>
+        </div>
+      </div>
+      <div id="searchResults-container21" class="col-33 col-offset-10 col-bottom">
+        <div id="searchResults-markdown21" class="show-list-numbers-and-dots">
+          <p style="color:#000000;">
+            <strong>Agent/Office</strong>
+          </p>
+        </div>
+      </div>
+      <div id="searchResults-container22" class="col-33 col-bottom">
+        <div id="searchResults-markdown22" style="text-align:right;" class="show-list-numbers-and-dots">
+          <p style="color:#000000;">
+            <strong>Amount/ Destination</strong>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div id="searchResults-container26" ng-repeat="sale in sales" class="row">
+      <div id="searchResults-container23" class="col-25 col-bottom">
+        <a ui-sref="campusTravel.updateSale({&quot;saleId&quot;:&quot;&quot;+ sale.SaleID +&quot;&quot;})" id="searchResults-button4" ng-click="updateSale()" class="button button-positive button-small button-block">{{ sale.SaleDate | date:'mediumDate' }}</a>
+      </div>
+      <div id="searchResults-container24" class="col-33 col-offset-10">
+        <p>
+          {{ sale.AgentName }}
+          <br> {{ sale.OfficeLocation }}
+        </p>
+      </div>
+      <div id="searchResults-container25" class="col-33 text-right">
+        <p>
+          {{ sale.Amount | currency }}
+          <br> {{ sale.DestinationName }}
+        </p>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

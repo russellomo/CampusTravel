@@ -1,0 +1,46 @@
+<ion-view title="Sales" id="page4">
+  <ion-content padding="true" class="has-header">
+    <div id="sales-container11" class="row">
+      <div id="sales-container12" class="col-33 col-bottom">
+        <div id="sales-markdown15" class="show-list-numbers-and-dots">
+          <p style="color:#000000;">
+            <strong>Date</strong>
+          </p>
+        </div>
+      </div>
+      <div id="sales-container13" class="col-33 col-bottom">
+        <div id="sales-markdown16" class="show-list-numbers-and-dots">
+          <p style="color:#000000;">
+            <strong>Agent/ Office</strong>
+          </p>
+        </div>
+      </div>
+      <div id="sales-container14" class="col-33">
+        <div id="sales-markdown17" style="text-align:right;" class="show-list-numbers-and-dots">
+          <p style="color:#000000;">
+            <strong>Amount/ Destination</strong>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div id="sales-container18" ng-repeat="sale in sales" class="row">
+      <div id="sales-container15" class="col-33">
+        <p>
+          {{ sale.SaleDate | date:'mediumDate' }}
+        </p>
+      </div>
+      <div id="sales-container16" class="col-33">
+        <p>
+          {{ sale.AgentName }}
+          <br> {{ sale.OfficeLocation }}
+        </p>
+      </div>
+      <div id="sales-container17" class="col-33 text-right">
+        <p>
+          {{ sale.Amount | currency }}
+          <br> {{ sale.DestinationName }}
+        </p>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

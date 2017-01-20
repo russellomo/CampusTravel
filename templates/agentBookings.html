@@ -1,0 +1,56 @@
+<ion-view title="Agent Bookings" id="page3">
+  <ion-content padding="true" class="has-header">
+    <div id="agentBookings-container1" class="row">
+      <div id="agentBookings-container2" class="col-33">
+        <div id="agentBookings-markdown2" class="show-list-numbers-and-dots">
+          <p style="color:#000000;">
+            <strong>Name</strong>
+          </p>
+        </div>
+      </div>
+      <div id="agentBookings-container3" class="col-25">
+        <div id="agentBookings-markdown6" class="show-list-numbers-and-dots">
+          <p style="color:#000000;">
+            <strong>Office</strong>
+          </p>
+        </div>
+      </div>
+      <div id="agentBookings-container4" class="col-10">
+        <div id="agentBookings-markdown10" style="text-align:center;" class="show-list-numbers-and-dots">
+          <p style="color:#000000;">
+            <strong>#</strong>
+          </p>
+        </div>
+      </div>
+      <div id="agentBookings-container5" class="col-25">
+        <div id="agentBookings-markdown8" style="text-align:right;" class="show-list-numbers-and-dots">
+          <p style="color:#000000;">
+            <strong>Total</strong>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div id="agentBookings-container10" ng-repeat="booking in bookings" class="row">
+      <div id="agentBookings-container6" class="col-33">
+        <div id="agentBookings-markdown11" class="show-list-numbers-and-dots">
+          <p style="color:#000000;">{{ booking.AgentName }}</p>
+        </div>
+      </div>
+      <div id="agentBookings-container7" class="col-25">
+        <div id="agentBookings-markdown12" class="show-list-numbers-and-dots">
+          <p style="color:#000000;">{{ booking.OfficeLocation }}</p>
+        </div>
+      </div>
+      <div id="agentBookings-container8" class="col-10">
+        <div id="agentBookings-markdown13" style="text-align:center;" class="show-list-numbers-and-dots">
+          <p style="color:#000000;">{{ booking.NumSales }}</p>
+        </div>
+      </div>
+      <div id="agentBookings-container9" class="col-25">
+        <div id="agentBookings-markdown14" style="text-align:right;" class="show-list-numbers-and-dots">
+          <p style="color:#000000;">{{ booking.Total | currency }}</p>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

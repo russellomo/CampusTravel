@@ -1,0 +1,20 @@
+<ion-view title="Add Agent" id="page5">
+  <ion-content padding="true" class="has-header">
+    <form id="addAgent-form1" class="list">
+      <label class="item item-input" id="addAgent-input1">
+        <span class="input-label">Agent Name</span>
+        <input type="text" placeholder="" ng-model="data.agent">
+      </label>
+      <label class="item item-select" id="addAgent-select1">
+        <span class="input-label">Office Location </span>
+        <select ng-model="data.office" ng-options="office.OfficeID as office.OfficeLocation for office in offices"></select>
+      </label>
+    </form>
+    <button id="addAgent-button1" ng-click="addAgent()" ng-hide="hideButton" class="button button-positive  button-block">Add Agent</button>
+    <div id="addAgent-markdown9" style="text-align:center;" class="show-list-numbers-and-dots">
+      <p style="color:#000000;">
+        <strong>{{ post.message }}</strong>
+      </p>
+    </div>
+  </ion-content>
+</ion-view>

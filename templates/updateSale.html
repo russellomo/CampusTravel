@@ -1,0 +1,89 @@
+<ion-view title="Update Sale" id="page9">
+  <ion-content padding="true" class="has-header">
+    <div id="updateSale-container27" class="row">
+      <div id="updateSale-container28" class="col-75">
+        <div id="updateSale-container30" class="row">
+          <div id="updateSale-container31" class="col-33">
+            <div id="updateSale-markdown26" class="show-list-numbers-and-dots">
+              <p style="color:#000000;">
+                <strong>Agent</strong>
+              </p>
+            </div>
+          </div>
+          <div id="updateSale-container32" class="col-66">
+            <div id="updateSale-markdown27" class="show-list-numbers-and-dots">
+              <p style="color:#000000;">{{ sale.AgentName }}</p>
+            </div>
+          </div>
+        </div>
+        <div id="updateSale-container35" class="row">
+          <div id="updateSale-container33" class="col-33">
+            <div id="updateSale-markdown28" class="show-list-numbers-and-dots">
+              <p style="color:#000000;">
+                <strong>Date</strong>
+              </p>
+            </div>
+          </div>
+          <div id="updateSale-container34" class="col-66">
+            <div id="updateSale-markdown29" class="show-list-numbers-and-dots">
+              <p style="color:#000000;">{{ sale.SaleDate | date:'mediumDate' }}</p>
+            </div>
+          </div>
+        </div>
+        <div id="updateSale-container38" class="row">
+          <div id="updateSale-container36" class="col-33">
+            <div id="updateSale-markdown30" class="show-list-numbers-and-dots">
+              <p style="color:#000000;">
+                <strong>To</strong>
+              </p>
+            </div>
+          </div>
+          <div id="updateSale-container37" class="col-66">
+            <div id="updateSale-markdown31" class="show-list-numbers-and-dots">
+              <p style="color:#000000;">{{ sale.DestinationName }}</p>
+            </div>
+          </div>
+        </div>
+        <div id="updateSale-container41" class="row">
+          <div id="updateSale-container39" class="col-33">
+            <div id="updateSale-markdown32" class="show-list-numbers-and-dots">
+              <p style="color:#000000;">
+                <strong>Amount</strong>
+              </p>
+            </div>
+          </div>
+          <div id="updateSale-container40" class="col-66">
+            <div id="updateSale-markdown33" class="show-list-numbers-and-dots">
+              <p style="color:#000000;">{{ sale.Amount | currency }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="updateSale-container29" ng-click="deleteSale()" ng-hide="hideDeleteButton" class="col-25">
+        <button id="updateSale-button5" ng-click="deleteSale()" class="button button-assertive button-small button-block">Delete</button>
+      </div>
+    </div>
+    <div id="updateSale-markdown36" style="text-align:center;" class="show-list-numbers-and-dots">
+      <p style="color:#000000;">{{ post.message }}</p>
+    </div>
+    <form id="updateSale-form4" class="list" ng-hide="hideUpdateForm">
+      <label class="item item-select" id="updateSale-select6">
+        <span class="input-label">Agent</span>
+        <select ng-model="data.agentKey" ng-options="agent.AgentID as agent.AgentName for agent in agents"></select>
+      </label>
+      <label class="item item-input" id="updateSale-input6">
+        <span class="input-label">Date</span>
+        <input type="date" placeholder="" ng-model="data.saleDate">
+      </label>
+      <label class="item item-input" id="updateSale-input7">
+        <span class="input-label">Amount $</span>
+        <input type="number" placeholder="" ng-model="data.amount">
+      </label>
+      <label class="item item-select" id="updateSale-select8">
+        <span class="input-label">Destination</span>
+        <select ng-model="data.destinationKey" ng-options="destination.DestinationID as destination.DestinationName for destination in destinations"></select>
+      </label>
+      <button id="updateSale-button6" ng-click="updateSale()" ng-hide="hideUpdateButton" class="button button-positive  button-block">Update Sale</button>
+    </form>
+  </ion-content>
+</ion-view>
